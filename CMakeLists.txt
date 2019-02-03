@@ -167,7 +167,7 @@ file(GLOB SOURCES
 )
 
 add_executable(lightgbm src/main.cpp ${SOURCES})
-add_library(_lightgbm SHARED src/c_api.cpp src/lightgbm_R.cpp  ${SOURCES})
+add_library(_lightgbm STATIC src/c_api.cpp src/lightgbm_R.cpp  ${SOURCES})
 target_include_directories(_lightgbm PUBLIC ${LightGBM_HEADER_DIR})
 
 if(MSVC)
